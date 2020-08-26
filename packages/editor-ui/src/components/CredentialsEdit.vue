@@ -1,6 +1,6 @@
 <template>
 	<div v-if="dialogVisible" @keydown.stop>
-		<el-dialog :visible="dialogVisible" append-to-body width="55%" :title="title" :before-close="closeDialog">
+		<el-dialog :visible="dialogVisible" append-to-body width="75%" :title="title" :before-close="closeDialog">
 
 			<div class="credential-type-item">
 				<el-row v-if="!setCredentialType">
@@ -214,7 +214,7 @@ export default mixins(
 
 			this.$showMessage({
 				title: 'Credentials created',
-				message: `The credential "${eventData.data.name}" got created!`,
+				message: `"${eventData.data.name}" credentials were successfully created!`,
 				type: 'success',
 			});
 
@@ -227,7 +227,7 @@ export default mixins(
 
 			this.$showMessage({
 				title: 'Credentials updated',
-				message: `The credential "${eventData.data.name}" got updated!`,
+				message: `"${eventData.data.name}" credentials were successfully updated!`,
 				type: 'success',
 			});
 
